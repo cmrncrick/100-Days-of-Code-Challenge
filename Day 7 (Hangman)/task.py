@@ -8,8 +8,6 @@ lives = 6
 
 placeholder = ""
 
-guesses = []
-
 print(logo)
 
 # Randomly choose a word from the word list and assign it to a variable
@@ -48,10 +46,8 @@ while not game_over:
     # Check if the letter the user guessed (guess) is one of the letters in the
     # chosen_word. Print "right" if it is, "wrong" if it's not.
 
-    guesses.append(guess)
-
-    if guess in guesses:
-        print("\nYou have already chosen that word.")
+    if guess in correct_letters:
+        print("\nYou have already chosen that letter.")
         print("Please choose another.\n")
 
     # Iterating over the chosen word
